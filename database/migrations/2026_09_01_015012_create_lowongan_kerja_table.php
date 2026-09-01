@@ -10,7 +10,6 @@ return new class extends Migration
     {
         Schema::create('lowongan_kerja', function (Blueprint $table) {
             $table->id('id_lowongan_kerja');
-
             $table->foreignId('id_perusahaan')
                 ->constrained('perusahaan', 'id_perusahaan')
                 ->cascadeOnDelete();
